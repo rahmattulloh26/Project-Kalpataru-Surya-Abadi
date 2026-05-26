@@ -1,0 +1,25 @@
+/* resources/css/components/navbar.css
+ * ─────────────────────────────────────────────
+ * Style spesifik untuk komponen Header/Navbar.
+ * Class yang sulit diekspresikan dengan Tailwind
+ * utility murni ditaruh di sini.
+ * ─────────────────────────────────────────────
+ */
+
+/* ── Hamburger menu animation ────────────────── */
+#hamburger.hamburger-active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 5px);
+}
+#hamburger.hamburger-active .hamburger-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-8px);
+}
+#hamburger.hamburger-active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -5px);
+}
+
+/* ── Nav link active state ───────────────────── */
+nav a.active {
+    color: #52AE4A;
+    font-weight: 700;
+}

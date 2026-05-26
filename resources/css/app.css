@@ -1,0 +1,36 @@
+/* resources/css/app.css
+ * ─────────────────────────────────────────────
+ * Entry point utama CSS — JANGAN tambahkan style
+ * langsung di sini. Tambahkan file baru di
+ * resources/css/ lalu @import di bawah ini.
+ * ─────────────────────────────────────────────
+ */
+
+/* ── Tailwind CSS v4 ── */
+@import 'tailwindcss';
+
+/* ── Design Tokens & Theme ── */
+@theme {
+    /* Font */
+    --font-sans:  'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+                  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-inter: 'Inter', sans-serif;
+
+    /* Brand Colors */
+    --color-hijau:       #52AE4A;
+    --color-hijau-dark:  #3d8a36;
+    --color-hijau-light: #7dc776;
+}
+
+/* ── Source scanning (Tailwind v4) ── */
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+/* ── Modular CSS Files ── */
+@import './base.css';
+@import './components/navbar.css';
+@import './components/buttons.css';
+@import './components/animations.css';
