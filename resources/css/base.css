@@ -6,15 +6,6 @@
  * ─────────────────────────────────────────────
  */
 
-/* ── CSS Custom Properties (:root) ──────────── */
-/* ── Body Defaults ───────────────────────────── */
-/* body {
-    font-family: var(--font-inter, 'Inter', sans-serif);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scroll-behavior: smooth;
-} */
-
 /* ── Text Selection ──────────────────────────── */
 ::selection {
     background-color: #52AE4A;
@@ -37,4 +28,43 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: #3d8a36;
+}
+
+/* ── Card Layanan — Border Radius Presisi ────── */
+.card-layanan {
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 8rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 0rem;
+}
+
+/* ── Marquee / Logo Ticker ───────────────────── */
+/* Logo di-render 3x untuk memastikan layar penuh terisi */
+@keyframes marquee-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-33.333%);
+    }
+
+    /* 1/3 dari 3 sets = 1 set */
+}
+
+.marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: marquee-scroll 16s linear infinite;
+}
+
+/* Pause saat hover */
+.marquee-wrapper:hover .marquee-track {
+    animation-play-state: paused;
 }
