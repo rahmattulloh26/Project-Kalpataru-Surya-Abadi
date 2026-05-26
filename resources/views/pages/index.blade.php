@@ -191,14 +191,13 @@
                     'items' => ['Perencanaan Rumah Dan Gedung'],
                 ],
                 [
-                    'img' => 'src/img/service/ksa-service-06.png',
+                    'img' => 'src/img/service/ksa-service-05.png',
                     'title' => 'Kajian Teknis',
                     'items' => ['Kajian Teknis Lingkungan Dan Rekayasa', 'Analisis Dampak Lalu Lintas'],
                 ],
             ];
         @endphp
 
-        {{-- Grid 3 kolom — 1 loop untuk semua kartu --}}
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             @foreach ($layanan as $item)
                 <div class="bg-gray-200 rounded-b-2xl overflow-hidden flex flex-col">
@@ -289,43 +288,43 @@
         @php
             $projects = [
                 [
-                    'img' => 'src/img/portofolio/home-1.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-01.png',
                     'name' => 'PT Alfa Goldland Realty PT Alfa Goldland Realty',
                     'desc' => 'Dokumen Terkait Analisis Dampak Lingkungan Untuk Apartemen Lloyd; Tahun 2024',
                 ],
                 [
-                    'img' => 'src/img/portofolio/home-2.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-02.png',
                     'name' => 'Depo Bangunan',
                     'desc' => 'Proses Pembuatan Dokumen Evaluasi Lingkungan Hidup Untuk Depo Bangunan; Tahun 2024',
                 ],
                 [
-                    'img' => 'src/img/portofolio/home-3.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-03.png',
                     'name' => 'PT Profita Puri Lestari',
                     'desc' => 'Proses Pembuatan Dokumen Evaluasi Lingkungan Hidup Untuk Perumahan AEROLAND; Tahun 2024',
                 ],
                 [
-                    'img' => 'src/img/portofolio/home.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-04.png',
                     'name' => 'PT Tunas Suvarna',
                     'desc' =>
                         'Dokumen Terkait Analisis Dampak Lingkungan Untuk Rumah Sakit Tipe C; Tunas Suvarna; Tahun 2023',
                 ],
                 [
-                    'img' => 'src/img/portofolio/image 11.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-05.png',
                     'name' => 'RS Anwar Medika',
                     'desc' => 'Dokumen Lingkungan Dan Perizinan Untuk Rumah Sakit Anwar Medika; Tahun 2023',
                 ],
                 [
-                    'img' => 'src/img/portofolio/image 12.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-06.png',
                     'name' => 'BRI KCP Wonoayu',
                     'desc' => 'Dokumen Evaluasi Lingkungan Hidup Untuk Kantor Cabang Pembantu BRI; Tahun 2023',
                 ],
                 [
-                    'img' => 'src/img/portofolio/image 13.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-07.png',
                     'name' => 'RS Dr. Suyoto',
                     'desc' => 'Dokumen Lingkungan Dan Perizinan Untuk Rumah Sakit Dr. Suyoto; Tahun 2023',
                 ],
                 [
-                    'img' => 'src/img/portofolio/image 14.png',
+                    'img' => 'src/img/portofolio/portofolio-ksa-08.png',
                     'name' => 'Proyek Industri',
                     'desc' => 'Konstruksi IPAL Dan Perizinan Perusahaan Di Sektor Industri; Tahun 2023',
                 ],
