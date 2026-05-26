@@ -3,7 +3,7 @@
         <div class="flex items-center justify-between gap-8">
 
             {{-- ══ KIRI: Logo ══ --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-4 shrink-0">
+            <a href="{{ route('home') }}" class="flex items-center gap-2 md:gap-4 shrink-0">
                 <img src="{{ asset('src/img/LOGO KALPATARU SURYA ABADI.png') }}" alt="Kalpataru Surya Abadi"
                     class="w-12 md:w-14 lg:w-16 object-contain">
                 <div class="flex flex-col leading-none gap-0.5">
