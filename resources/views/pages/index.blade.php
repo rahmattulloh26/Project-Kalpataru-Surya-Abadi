@@ -160,7 +160,7 @@
         @php
             $layanan = [
                 [
-                    'img' => 'src/img/service/service-01.png',
+                    'img' => 'src/img/service/ksa-service-01.png',
                     'title' => 'Dokumen Lingkungan',
                     'items' => [
                         'AMDAL • Addendum Andal & RKL – RPL',
@@ -169,29 +169,29 @@
                     ],
                 ],
                 [
-                    'img' => 'src/img/service/service-02.png',
+                    'img' => 'src/img/service/ksa-service-02.png',
                     'title' => 'Persetujuan Teknis (Pertek)',
                     'items' => [
                         'Andal Lalin • Persetujuan Teknis Pemenuhan Baku Mutu Air Limbah • Persetujuan Teknis Pemenuhan Baku Mutu Emisi • Rincian Teknis Pengelolaan Limbah • B3 Kajian Hidrologi/PEIL Banjir • SLO',
                     ],
                 ],
                 [
-                    'img' => 'src/img/service/Service.png',
+                    'img' => 'src/img/service/ksa-service-03.png',
                     'title' => 'Konstruksi IPAL',
                     'items' => ['Perencanaan Dan Konstruksi Instalasi Pengelolaan Air Limbah (IPAL)'],
                 ],
                 [
-                    'img' => 'src/img/service/download (2) 1.png',
+                    'img' => 'src/img/service/ksa-service-04.png',
                     'title' => 'Perizinan Bangunan',
                     'items' => ['PBG ( Persetujuan Bangunan Gedung )', 'Sertifikat Layak Fungsi ( SLF )'],
                 ],
                 [
-                    'img' => 'src/img/service/A Importância dos Desenhos Arquitetônicos na Prática Profissional_ 1.png',
+                    'img' => 'src/img/service/ksa-service-05.png',
                     'title' => 'Arsitektur',
                     'items' => ['Perencanaan Rumah Dan Gedung'],
                 ],
                 [
-                    'img' => 'src/img/service/image 15.png',
+                    'img' => 'src/img/service/ksa-service-06.png',
                     'title' => 'Kajian Teknis',
                     'items' => ['Kajian Teknis Lingkungan Dan Rekayasa', 'Analisis Dampak Lalu Lintas'],
                 ],
