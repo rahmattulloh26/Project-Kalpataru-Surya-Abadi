@@ -76,7 +76,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 lg:gap-6">
 
             <div class="card-layanan bg-hijau p-6 md:p-7 flex flex-col gap-4 min-h-[260px] md:min-h-[280px]">
-                <div class="w-20 h-20">
+                <div class="w-16 h-16 md:w-20 md:h-20">
                     <img src="{{ asset('src/img/icon-layanan/layanan-ksa-1.png') }}" class="w-full" alt="Mudah & Fleksibel">
                 </div>
                 <div>
@@ -91,7 +91,7 @@
             </div>
 
             <div class="card-layanan bg-hijau p-6 md:p-7 flex flex-col gap-4 min-h-[260px] md:min-h-[280px]">
-                <div class="w-20 h-20">
+                <div class="w-16 h-16 md:w-20 md:h-20">
                     <img src="{{ asset('src/img/icon-layanan/layanan-ksa-2.png') }}" class="w-full"
                         alt="Tenaga Ahli Profesional">
                 </div>
@@ -107,7 +107,7 @@
             </div>
 
             <div class="card-layanan bg-hijau p-6 md:p-7 flex flex-col gap-4 min-h-[260px] md:min-h-[280px]">
-                <div class="w-25 h-20">
+                <div class="w-18 h-16 md:w-25 md:h-20">
                     <img src="{{ asset('src/img/icon-layanan/layanan-ksa-3.png') }}" class="w-full"
                         alt="Pelayanan Terpercaya">
                 </div>
@@ -123,7 +123,7 @@
             </div>
 
             <div class="card-layanan bg-hijau p-6 md:p-7 flex flex-col gap-4 min-h-[260px] md:min-h-[280px]">
-                <div class="w-20 h-20">
+                <div class="w-16 h-16 md:w-20 md:h-20">
                     <img src="{{ asset('src/img/icon-layanan/layanan-ksa-4.png') }}" class="w-full"
                         alt="Berpengalaman & Kompeten">
                 </div>
