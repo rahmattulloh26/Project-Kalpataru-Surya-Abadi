@@ -8,56 +8,86 @@
 
 @section('content')
 
-    {{-- Section Hero --}}
-    <section class="relative w-full h-screen overflow-hidden">
+    {{-- Section Hero Slider --}}
+    <section class="relative w-full h-screen overflow-hidden" id="hero-slider">
 
-        <img src="{{ asset('src/img/bg-utama/hero-ksa.png') }}" alt="PT Kalpataru Surya Abadi"
-            class="absolute inset-0 w-full h-full object-cover object-center">
+        @php
+            $slides = [
+                [
+                    'img' => 'src/img/bg-utama/hero-ksa-01.png',
+                    'title' => 'Welcome to PT Kalpataru Surya Abadi',
+                    'subtitle' => 'Professional Environmental &amp; Licensing Consultant Since 2019',
+                    'desc' =>
+                        'PT KALPATARU SURYA ABADI Menyediakan Solusi Konsultasi Lingkungan Hidup, Perizinan, Dan Perencanaan Profesional Untuk Mendukung Keberlanjutan Usaha Dan Kelestarian Lingkungan.',
+                ],
+                [
+                    'img' => 'src/img/bg-utama/hero-ksa-02.png',
+                    'title' => 'Environmental Consulting &amp; Permit Services',
+                    'subtitle' =>
+                        'AMDAL &bull; UKL-UPL &bull; PERTEK &bull; Andalalin &bull; Hydrology Study &bull; IPAL Construction &bull; Building Permit',
+                    'desc' =>
+                        'Didukung Tenaga Ahli Berpengalaman Dalam Penyusunan Dokumen Lingkungan, Pengelolaan Limbah, Perizinan Bangunan, Hingga Konstruksi IPAL.',
+                ],
+                [
+                    'img' => 'src/img/bg-utama/hero-ksa-03.png',
+                    'title' => 'Our Commitment',
+                    'subtitle' => 'Trusted, Professional &amp; Sustainable Solutions',
+                    'desc' =>
+                        'Berkomitmen Memberikan Pelayanan Konsultasi Multidisiplin Yang Terpercaya Dengan Mengedepankan Kualitas, Kepuasan Mitra Kerja, Dan Berpegang Teguh Prinsip Kelestarian Lingkungan Hidup.',
+                ],
+            ];
+        @endphp
 
-        <div class="absolute inset-0 bg-black/50"></div>
-
-        <div class="relative z-10 h-full flex items-center">
+        @foreach ($slides as $i => $slide)
             <div
-                class="px-6 sm:px-10 md:px-14 lg:px-20 xl:px-32 2xl:px-40
-                        max-w-sm sm:max-w-md md:max-w-xl lg:max-w-3xl xl:max-w-5xl 2xl:max-w-6xl">
+                class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out
+                        {{ $i === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0' }}">
 
-                <h1
-                    class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl
-                           font-bold text-white uppercase leading-tight
-                           mb-2 md:mb-3">
-                    Welcome to PT Kalpataru Surya Abadi
-                </h1>
+                <img src="{{ asset($slide['img']) }}" alt="{{ strip_tags($slide['title']) }}"
+                    class="absolute inset-0 w-full h-full object-cover object-center">
 
-                <p
-                    class="text-[11px] sm:text-xs md:text-sm lg:text-base
-                          font-bold text-oren
-                          mb-2 md:mb-3">
-                    Professional Environmental &amp; Licensing Consultant Since 2019
-                </p>
+                <div class="absolute inset-0 bg-black/30"></div>
 
-                <p
-                    class="text-[11px] sm:text-xs md:text-sm lg:text-base
-                          text-white leading-relaxed
-                          mb-5 md:mb-6 lg:mb-8">
-                    PT KALPATARU SURYA ABADI Menyediakan Solusi Konsultasi
-                    Lingkungan Hidup, Perizinan, Dan Perencanaan Profesional
-                    Untuk Mendukung Keberlanjutan Usaha Dan Kelestarian
-                    Lingkungan.
-                </p>
+                <div class="relative z-10 h-full flex items-center">
+                    <div
+                        class="px-6 sm:px-10 md:px-14 lg:px-20 xl:px-32 2xl:px-40
+                                max-w-sm sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl">
 
-                <a href="{{ route('contact') }}"
-                    class="inline-flex items-center justify-center
-                           px-6 sm:px-16 md:px-10 lg:px-12
-                           py-2 md:py-2.5 lg:py-3
-                           text-xs sm:text-sm
-                           rounded-full font-semibold
-                           bg-transparent border-2 border-hijau text-white
-                           hover:bg-white hover:text-hijau
-                           transition-all duration-300">
-                    Contact Us
-                </a>
+                        <h1
+                            class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl
+                                   font-bold text-white uppercase leading-tight mb-2 md:mb-3">
+                            {!! $slide['title'] !!}
+                        </h1>
+
+                        <p
+                            class="text-[11px] sm:text-xs md:text-sm lg:text-base
+                                  font-bold text-oren mb-2 md:mb-3 leading-snug">
+                            {!! $slide['subtitle'] !!}
+                        </p>
+
+                        <p
+                            class="text-[11px] sm:text-xs md:text-sm lg:text-base
+                                  text-white leading-relaxed mb-5 md:mb-6 lg:mb-8">
+                            {{ $slide['desc'] }}
+                        </p>
+
+                        <a href="{{ route('contact') }}"
+                            class="inline-flex items-center justify-center
+                                   px-8 sm:px-10 md:px-12 lg:px-14
+                                   py-2 md:py-2.5 lg:py-3
+                                   text-xs sm:text-sm
+                                   rounded-full font-semibold
+                                   bg-transparent border-2 border-hijau text-white
+                                   hover:bg-white hover:text-hijau
+                                   transition-all duration-300">
+                            Contact Us
+                        </a>
+
+                    </div>
+                </div>
 
             </div>
+        @endforeach
 
     </section>
 
