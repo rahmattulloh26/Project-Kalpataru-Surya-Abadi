@@ -15,7 +15,7 @@
                     <a href="{{ route('home') }}" class="flex items-center gap-4 shrink-0 w-fit">
                         <img src="{{ asset('src/img/LOGO KALPATARU SURYA ABADI.png') }}" alt="Kalpataru Surya Abadi"
                             class="w-12 md:w-14 lg:w-18 object-contain">
-                        <div class="flex flex-col leading-none gap-0.5">
+                        <div class="flex flex-col leading-none gap-1.5">
                             <span
                                 class="text-[11px] md:text-[16px] text-hijau font-bold uppercase whitespace-nowrap tracking-wide">
                                 PT Kalpataru Surya Abadi
