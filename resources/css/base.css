@@ -7,32 +7,13 @@
  */
 
 /* ── CSS Custom Properties (:root) ──────────── */
-:root {
-    /* Tinggi navbar — sesuaikan jika ukuran navbar berubah */
-    --navbar-height-mobile: 72px;
-    --navbar-height-md:     80px;
-    --navbar-height-lg:     96px;
-    --navbar-height-xl:     80px;
-
-    /* Spacing konsisten */
-    --section-padding-x:    clamp(1.5rem, 5vw, 8rem);
-    --section-padding-y:    clamp(3rem, 8vw, 6rem);
-
-    /* Transisi default */
-    --transition-base:      150ms ease-in-out;
-    --transition-smooth:    300ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Border radius brand */
-    --radius-brand: 2px;
-}
-
 /* ── Body Defaults ───────────────────────────── */
-body {
+/* body {
     font-family: var(--font-inter, 'Inter', sans-serif);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
-}
+} */
 
 /* ── Text Selection ──────────────────────────── */
 ::selection {
@@ -44,13 +25,16 @@ body {
 ::-webkit-scrollbar {
     width: 6px;
 }
+
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
+
 ::-webkit-scrollbar-thumb {
     background: #52AE4A;
     border-radius: 3px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background: #3d8a36;
 }
