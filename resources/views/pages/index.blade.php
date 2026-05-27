@@ -11,33 +11,6 @@
     {{-- Section Hero Slider --}}
     <section class="relative w-full h-screen overflow-hidden" id="hero-slider">
 
-        @php
-            $slides = [
-                [
-                    'img' => 'src/img/bg-utama/hero-ksa-01.png',
-                    'title' => 'Welcome to PT Kalpataru Surya Abadi',
-                    'subtitle' => 'Professional Environmental &amp; Licensing Consultant Since 2019',
-                    'desc' =>
-                        'PT KALPATARU SURYA ABADI Menyediakan Solusi Konsultasi Lingkungan Hidup, Perizinan, Dan Perencanaan Profesional Untuk Mendukung Keberlanjutan Usaha Dan Kelestarian Lingkungan.',
-                ],
-                [
-                    'img' => 'src/img/bg-utama/hero-ksa-02.png',
-                    'title' => 'Environmental Consulting &amp; Permit Services',
-                    'subtitle' =>
-                        'AMDAL &bull; UKL-UPL &bull; PERTEK &bull; Andalalin &bull; Hydrology Study &bull; IPAL Construction &bull; Building Permit',
-                    'desc' =>
-                        'Didukung Tenaga Ahli Berpengalaman Dalam Penyusunan Dokumen Lingkungan, Pengelolaan Limbah, Perizinan Bangunan, Hingga Konstruksi IPAL.',
-                ],
-                [
-                    'img' => 'src/img/bg-utama/hero-ksa-03.png',
-                    'title' => 'Our Commitment',
-                    'subtitle' => 'Trusted, Professional &amp; Sustainable Solutions',
-                    'desc' =>
-                        'Berkomitmen Memberikan Pelayanan Konsultasi Multidisiplin Yang Terpercaya Dengan Mengedepankan Kualitas, Kepuasan Mitra Kerja, Dan Berpegang Teguh Prinsip Kelestarian Lingkungan Hidup.',
-                ],
-            ];
-        @endphp
-
         @foreach ($slides as $i => $slide)
             <div
                 class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out
@@ -79,6 +52,8 @@
                                    rounded-full font-semibold
                                    bg-transparent border-2 border-hijau text-white
                                    hover:bg-white hover:text-hijau
+                                   focus:bg-white focus:text-hijau
+                                   active:bg-white active:text-hijau
                                    transition-all duration-300">
                             Contact Us
                         </a>
@@ -187,50 +162,9 @@
             </p>
         </div>
 
-        @php
-            $layanan = [
-                [
-                    'img' => 'src/img/service/ksa-service-01.png',
-                    'title' => 'Dokumen Lingkungan',
-                    'items' => [
-                        'AMDAL • Addendum Andal & RKL – RPL',
-                        'DELH • RKL – RPL Rinci • UKL – UPL • DPLH',
-                        'Laporan Implementasi RKL RPL',
-                    ],
-                ],
-                [
-                    'img' => 'src/img/service/ksa-service-02.png',
-                    'title' => 'Persetujuan Teknis (Pertek)',
-                    'items' => [
-                        'Andal Lalin • Persetujuan Teknis Pemenuhan Baku Mutu Air Limbah • Persetujuan Teknis Pemenuhan Baku Mutu Emisi • Rincian Teknis Pengelolaan Limbah • B3 Kajian Hidrologi/PEIL Banjir • SLO',
-                    ],
-                ],
-                [
-                    'img' => 'src/img/service/ksa-service-03.png',
-                    'title' => 'Konstruksi IPAL',
-                    'items' => ['Perencanaan Dan Konstruksi Instalasi Pengelolaan Air Limbah (IPAL)'],
-                ],
-                [
-                    'img' => 'src/img/service/ksa-service-04.png',
-                    'title' => 'Perizinan Bangunan',
-                    'items' => ['PBG ( Persetujuan Bangunan Gedung )', 'Sertifikat Layak Fungsi ( SLF )'],
-                ],
-                [
-                    'img' => 'src/img/service/ksa-service-05.png',
-                    'title' => 'Arsitektur',
-                    'items' => ['Perencanaan Rumah Dan Gedung'],
-                ],
-                [
-                    'img' => 'src/img/service/ksa-service-05.png',
-                    'title' => 'Kajian Teknis',
-                    'items' => ['Kajian Teknis Lingkungan Dan Rekayasa', 'Analisis Dampak Lalu Lintas'],
-                ],
-            ];
-        @endphp
-
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
             @foreach ($layanan as $item)
-                <div class="card-service bg-gray-200 rounded-b-2xl overflow-hidden flex flex-col">
+                <div class="card-service bg-gray-200 rounded-b-2xl overflow-hidden flex flex-col shadow-lg">
 
                     {{-- Gambar --}}
                     <div class="overflow-hidden h-48 sm:h-80 shrink-0" style="transform: translateZ(0);">
@@ -276,14 +210,6 @@
             <div class="max-w-5xl mx-auto overflow-hidden px-4">
                 <div class="marquee-wrapper">
 
-                    @php
-                        $logos = [
-                            ['path' => 'src/img/logo-trusted/logo-trusted-1.png', 'alt' => 'Mitra 1'],
-                            ['path' => 'src/img/logo-trusted/logo-trusted-2.png', 'alt' => 'Mitra 2'],
-                            ['path' => 'src/img/logo-trusted/logo-trusted-3.png', 'alt' => 'Mitra 3'],
-                        ];
-                    @endphp
-
                     <div class="marquee-track gap-10 px-8">
                         @for ($set = 0; $set < 4; $set++)
                             @foreach ($logos as $logo)
@@ -302,7 +228,7 @@
 
     </section>
 
-    {{-- Section Portfolio --}}
+    {{-- Section Portofolio --}}
     <section class="bg-white py-12 md:py-16 lg:py-20 px-6 md:px-10 xl:px-16">
 
         <div class="text-center mb-10 md:mb-12">
@@ -314,52 +240,6 @@
                 Consulting Projects Successfully Completed With Quality And Trusted Expertise.
             </p>
         </div>
-
-        @php
-            $projects = [
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-01.png',
-                    'name' => 'PT Alfa Goldland Realty PT Alfa Goldland Realty',
-                    'desc' => 'Dokumen Terkait Analisis Dampak Lingkungan Untuk Apartemen Lloyd; Tahun 2024',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-02.png',
-                    'name' => 'Depo Bangunan',
-                    'desc' => 'Proses Pembuatan Dokumen Evaluasi Lingkungan Hidup Untuk Depo Bangunan; Tahun 2024',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-03.png',
-                    'name' => 'PT Profita Puri Lestari',
-                    'desc' => 'Proses Pembuatan Dokumen Evaluasi Lingkungan Hidup Untuk Perumahan AEROLAND; Tahun 2024',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-04.png',
-                    'name' => 'PT Tunas Suvarna',
-                    'desc' =>
-                        'Dokumen Terkait Analisis Dampak Lingkungan Untuk Rumah Sakit Tipe C; Tunas Suvarna; Tahun 2023',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-05.png',
-                    'name' => 'RS Anwar Medika',
-                    'desc' => 'Dokumen Lingkungan Dan Perizinan Untuk Rumah Sakit Anwar Medika; Tahun 2023',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-06.png',
-                    'name' => 'BRI KCP Wonoayu',
-                    'desc' => 'Dokumen Evaluasi Lingkungan Hidup Untuk Kantor Cabang Pembantu BRI; Tahun 2023',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-07.png',
-                    'name' => 'RS Dr. Suyoto',
-                    'desc' => 'Dokumen Lingkungan Dan Perizinan Untuk Rumah Sakit Dr. Suyoto; Tahun 2023',
-                ],
-                [
-                    'img' => 'src/img/portofolio/portofolio-ksa-08.png',
-                    'name' => 'Proyek Industri',
-                    'desc' => 'Konstruksi IPAL Dan Perizinan Perusahaan Di Sektor Industri; Tahun 2023',
-                ],
-            ];
-        @endphp
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             @foreach ($projects as $project)
@@ -374,7 +254,7 @@
                         <h3 class="text-sm md:text-base font-bold text-hijau leading-snug mb-1 line-clamp-2">
                             {{ $project['name'] }}
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-gray-600 leading-relaxed line-clamp-2">
+                        <p class="text-[11px] sm:text-xs text-gray-600 leading-relaxed line-clamp-3">
                             {{ $project['desc'] }}
                         </p>
                     </div>
@@ -384,19 +264,21 @@
         </div>
 
         <div class="text-center mt-10 md:mt-12">
-            <a href="{{ route('portfolio') }}"
+            <a href="{{ route('portofolio') }}"
                 class="inline-flex items-center justify-center
                        px-8 py-3 font-semibold text-sm
                        border-2 border-hijau text-oren
                        hover:bg-hijau hover:text-white
+                       focus:bg-hijau focus:text-white
+                       active:bg-hijau active:text-white
                        transition-all duration-300">
                 View More Our Project
             </a>
         </div>
 
     </section>
-{{-- Untuk section CTA  --}}
-    @include('components.cta')
+
+    {{-- Untuk Section CTA  --}}
+    <x-cta></x-cta>
 
 @endsection
-

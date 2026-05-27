@@ -3,14 +3,18 @@
 
 import './bootstrap';
 
-import { initNavbar }      from './modules/navbar';
-import { initHeroSwiper }  from './modules/swiper';
-import { initMap }         from './modules/map';
-import { initHeroSlider }  from './modules/hero-slider';
+import { initNavbar as initHeader } from './modules/header';
+import { initHeroSwiper } from './modules/swiper';
+import { initMap } from './modules/map';
+import { initHeroSlider } from './modules/hero-slider';
+import { initDataGrid } from './modules/data-grid';
+import { initImageProtect } from './modules/image-protect';
 
 document.addEventListener('DOMContentLoaded', () => {
-    initNavbar();
+    initHeader();
     initHeroSwiper();
     initMap();
     initHeroSlider();
+    initDataGrid();
+    initImageProtect();
 });

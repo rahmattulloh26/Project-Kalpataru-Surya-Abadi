@@ -79,7 +79,7 @@
                             <li><a href="{{ route('about-us') }}"
                                     class="text-xs text-gray-600 hover:text-hijau transition-colors duration-200">Tentang
                                     Kami</a></li>
-                            <li><a href="{{ route('portfolio') }}"
+                            <li><a href="{{ route('portofolio') }}"
                                     class="text-xs text-gray-600 hover:text-hijau transition-colors duration-200">Klien
                                     Kami</a></li>
                         </ul>
@@ -105,13 +105,13 @@
                     <div class="flex flex-col gap-2">
                         <h4 class="text-xs md:text-sm font-bold text-gray-800 uppercase tracking-wide">Portofolio</h4>
                         <ul class="flex flex-col gap-1">
-                            <li><a href="{{ route('portfolio') }}"
+                            <li><a href="{{ route('portofolio') }}"
                                     class="text-xs text-gray-600 hover:text-hijau transition-colors duration-200">Konsultasi</a>
                             </li>
-                            <li><a href="{{ route('portfolio') }}"
+                            <li><a href="{{ route('portofolio') }}"
                                     class="text-xs text-gray-600 hover:text-hijau transition-colors duration-200">Arsitektur</a>
                             </li>
-                            <li><a href="{{ route('portfolio') }}"
+                            <li><a href="{{ route('portofolio') }}"
                                     class="text-xs text-gray-600 hover:text-hijau transition-colors duration-200">Contruktor</a>
                             </li>
                         </ul>
