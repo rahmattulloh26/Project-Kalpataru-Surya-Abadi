@@ -16,8 +16,8 @@ export function initMap() {
     const mapElement = document.getElementById('map');
     if (!mapElement) return; // Hanya jalankan jika elemen #map ada di halaman
 
-    const latitude  = -6.200000;
-    const longitude = 106.816666;
+    const latitude  = -6.1808478000359734;
+    const longitude = 106.60453738773842;
 
     const map = L.map('map').setView([latitude, longitude], 13);
 
@@ -28,6 +28,6 @@ export function initMap() {
 
     L.marker([latitude, longitude])
         .addTo(map)
-        .bindPopup('<b>PT Kalpataru Surya Abadi</b><br>Lokasi kantor kami.')
+        .bindPopup('<a href="https://maps.app.goo.gl/CCeXVE6w7B71yLss8" target="_blank" class="popup-link-footer">PT Kalpataru Surya Abadi<br>Lokasi kantor kami.</a>')
         .openPopup();
 }
