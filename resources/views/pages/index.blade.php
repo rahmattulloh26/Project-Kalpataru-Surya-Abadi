@@ -374,7 +374,7 @@
                         <h3 class="text-sm md:text-base font-bold text-hijau leading-snug mb-1 line-clamp-2">
                             {{ $project['name'] }}
                         </h3>
-                        <p class="text-[11px] sm:text-xs text-gray-600 leading-relaxed line-clamp-2">
+                        <p class="text-[11px] sm:text-xs text-gray-600 leading-relaxed line-clamp-3">
                             {{ $project['desc'] }}
                         </p>
                     </div>

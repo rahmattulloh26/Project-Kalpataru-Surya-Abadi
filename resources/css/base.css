@@ -69,3 +69,12 @@
 .marquee-wrapper:hover .marquee-track {
     animation-play-state: paused;
 }
+
+/* ── Scrollbar Hide (untuk filter bar portfolio) ─────────────── */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
