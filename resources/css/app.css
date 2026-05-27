@@ -21,6 +21,7 @@
     --color-hijau-dark:  #3d8a36;
     --color-hijau-light: #7dc776;
     --color-oren:        #F9B000;
+    --color-grey:        #D9D9D9;
 }
 
 /* ── Source scanning (Tailwind v4) ── */
@@ -32,3 +33,4 @@
 
 /* ── Modular CSS Files ── */
 @import './base.css';
+@import './footer.css';
