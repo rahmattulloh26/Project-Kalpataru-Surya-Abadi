@@ -3,15 +3,15 @@
         <div class="flex items-center justify-between gap-8">
 
             {{-- ══ KIRI: Logo ══ --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-2 shrink-0">
-                <img src="{{ asset('src/img/logo-ksa.png') }}" alt="Kalpataru Surya Abadi"
-                    class="w-14 md:w-16 lg:w-20 object-contain">
+            <a href="{{ route('home') }}" class="flex items-center gap-2 md:gap-3 shrink-0">
+                <img src="{{ asset('src/img/LOGO KALPATARU SURYA ABADI.png') }}" alt="Kalpataru Surya Abadi"
+                    class="w-12 md:w-14 lg:w-16 object-contain">
                 <div class="flex flex-col leading-none gap-0.5">
                     <span
                         class="text-[11px] md:text-xs lg:text-sm text-hijau font-bold uppercase whitespace-nowrap tracking-wide">
                         PT Kalpataru Surya Abadi
                     </span>
-                    <span class="text-[8px] md:text-[9px] lg:text-[10px] text-gray-500 font-normal whitespace-nowrap">
+                    <span class="text-[8px] md:text-[9px] lg:text-[10px] text-black font-semibold whitespace-nowrap">
                         Konsultasi Lingkungan dan Perizinan Usaha
                     </span>
                 </div>
@@ -30,23 +30,34 @@
 
                         <li>
                             <a href="{{ route('home') }}"
-                                class="block py-3 px-5 xl:py-8 text-sm hover:text-hijau transition-colors">
-                                Home
+                                class="block py-3 px-5 xl:py-8 text-sm transition-colors
+                                       {{ request()->routeIs('home') ? 'text-hijau' : 'hover:text-hijau' }}">
+                                <span class="{{ request()->routeIs('home') ? 'border-b-2 border-hijau pb-0.5' : '' }}">
+                                    Home
+                                </span>
                             </a>
                         </li>
 
                         <li>
                             <a href="{{ route('about-us') }}"
-                                class="block py-3 px-5 xl:py-8 text-sm hover:text-hijau transition-colors">
-                                About Us
+                                class="block py-3 px-5 xl:py-8 text-sm transition-colors
+                                       {{ request()->routeIs('about-us') ? 'text-hijau' : 'hover:text-hijau' }}">
+                                <span
+                                    class="{{ request()->routeIs('about-us') ? 'border-b-2 border-hijau pb-0.5' : '' }}">
+                                    About Us
+                                </span>
                             </a>
                         </li>
 
                         {{-- Dropdown Service --}}
                         <li class="relative xl:flex items-center">
                             <a href="{{ route('service') }}" id="produk-dropdown-btn"
-                                class="flex items-center gap-1 py-3 px-5 xl:py-8 text-sm hover:text-hijau transition-colors cursor-pointer">
-                                Service
+                                class="flex items-center gap-1 py-3 px-5 xl:py-8 text-sm transition-colors cursor-pointer
+                                       {{ request()->routeIs('service*') ? 'text-hijau' : 'hover:text-hijau' }}">
+                                <span
+                                    class="{{ request()->routeIs('service*') ? 'border-b-2 border-hijau pb-0.5' : '' }}">
+                                    Service
+                                </span>
                                 <svg class="w-3.5 h-3.5 transition-transform duration-200 shrink-0" fill="none"
                                     stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,8 +85,12 @@
 
                         <li>
                             <a href="{{ route('portfolio') }}"
-                                class="block py-3 px-5 xl:py-8 text-sm hover:text-hijau transition-colors">
-                                Portofolio
+                                class="block py-3 px-5 xl:py-8 text-sm transition-colors
+                                       {{ request()->routeIs('portfolio') ? 'text-hijau' : 'hover:text-hijau' }}">
+                                <span
+                                    class="{{ request()->routeIs('portfolio') ? 'border-b-2 border-hijau pb-0.5' : '' }}">
+                                    Portofolio
+                                </span>
                             </a>
                         </li>
 

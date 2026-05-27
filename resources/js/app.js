@@ -3,12 +3,14 @@
 
 import './bootstrap';
 
-import { initNavbar }     from './modules/navbar';
-import { initHeroSwiper } from './modules/swiper';
-import { initMap }        from './modules/map';
+import { initNavbar }      from './modules/navbar';
+import { initHeroSwiper }  from './modules/swiper';
+import { initMap }         from './modules/map';
+import { initHeroSlider }  from './modules/hero-slider';
 
 document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initHeroSwiper();
     initMap();
+    initHeroSlider();
 });
