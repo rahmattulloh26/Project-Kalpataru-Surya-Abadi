@@ -41,24 +41,25 @@
     transition: all 300ms ease-in-out;
     transform: scale(1);
 }
-.card-layanan:hover{
-     overflow: visible;
+
+.card-layanan:hover {
+    overflow: visible;
     transform: scale(1.05);
     box-shadow: var(--shadow-2xl);
-
 }
-    /* Card Untuk service */
-.card-service{
-     /* Untuk Animasi */
-    box-shadow: var(--shadow-xl);
+
+/* Card Untuk service */
+.card-service {
+    /* Untuk Animasi */
     transition: all 300ms ease-in-out;
     transform: scale(1);
 }
-.card-service:hover{
-      overflow: visible;
+
+.card-service:hover {
+    overflow: visible;
     transform: scale(1.05);
-    box-shadow: var(--shadow-2xl);
 }
+
 /* ── Marquee / Logo Ticker ───────────────────── */
 /* Logo di-render 3x untuk memastikan layar penuh terisi */
 @keyframes marquee-scroll {
@@ -91,11 +92,25 @@
     animation-play-state: paused;
 }
 
-/* ── Scrollbar Hide (untuk filter bar portfolio) ─────────────── */
+/* ── Scrollbar Hide (untuk filter bar portofolio) ─────────────── */
 .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
+
 .scrollbar-hide::-webkit-scrollbar {
     display: none;
+}
+
+/* ── Image Protection ─────────────────────────────────────────── */
+/* Layer CSS: cegah drag gambar via -webkit-user-drag              */
+/* Layer JS : draggable=false + blokir contextmenu (image-protect.js) */
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-user-select: none;
+    user-select: none;
 }

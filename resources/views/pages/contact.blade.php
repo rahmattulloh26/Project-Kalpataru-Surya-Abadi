@@ -13,4 +13,7 @@
         <p class="text-gray-400 text-sm">Halaman Kontak — Segera hadir.</p>
     </div>
 
+    {{-- Untuk Section CTA  --}}
+    <x-cta></x-cta>
+
 @endsection
