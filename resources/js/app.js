@@ -3,12 +3,12 @@
 
 import './bootstrap';
 
-import { initNavbar as initHeader } from './modules/header';
-import { initHeroSwiper } from './modules/swiper';
-import { initMap } from './modules/map';
-import { initHeroSlider } from './modules/hero-slider';
-import { initDataGrid } from './modules/data-grid';
-import { initImageProtect } from './modules/image-protect';
+import { initNavbar as initHeader } from './modules/ui/header';
+import { initHeroSwiper } from './modules/plugins/swiper';
+import { initMap } from './modules/plugins/map';
+import { initHeroSlider } from './modules/plugins/hero-slider';
+import { initDataGrid } from './modules/features/data-grid';
+import { initImageProtect } from './modules/utils/image-protect';
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeader();

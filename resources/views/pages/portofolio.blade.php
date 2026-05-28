@@ -33,7 +33,7 @@
                 'arsitektur' => 'Arsitektur',
             ];
         @endphp
-        <x-filter-tabs :filters="$filters" />
+        <x-feature.filter-tabs :filters="$filters" />
 
         {{-- ══ Grid Proyek ══ --}}
         <section class="bg-white py-8 md:py-12 px-6 md:px-10 xl:px-16 min-h-[50vh]">
@@ -73,12 +73,15 @@
             </div>
 
             {{-- ── Pagination ── --}}
-            <x-pagination />
+            <x-feature.pagination />
 
         </section>
     </div>
 
+    {{-- Untuk Section Why Us  --}}
+    <x-feature.why-us />
+
     {{-- Untuk Section CTA  --}}
-    <x-cta></x-cta>
+    <x-feature.cta></x-feature.cta>
 
 @endsection

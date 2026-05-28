@@ -35,7 +35,7 @@
                 'arsitektur' => 'Arsitektur',
             ];
         @endphp
-        <x-filter-tabs :filters="$filters" />
+        <x-feature.filter-tabs :filters="$filters" />
 
 
         {{-- ══ Grid Layanan ══ --}}
@@ -84,13 +84,15 @@
             </div>
 
             {{-- ── Pagination ── --}}
-            <x-pagination />
+            <x-feature.pagination />
 
         </section>
     </div>
 
+    {{-- Untuk Section Why Us  --}}
+    <x-feature.why-us />
 
     {{-- Untuk Section CTA  --}}
-    <x-cta></x-cta>
+    <x-feature.cta></x-feature.cta>
 
 @endsection
