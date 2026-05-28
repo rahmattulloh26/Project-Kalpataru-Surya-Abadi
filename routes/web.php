@@ -16,7 +16,7 @@ Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
 // ── Layanan ────────────────────────────────────────────────────
 Route::get('/service', [ServiceController::class, 'index'])->name('service');
 
-// ── Portofolio (dengan filter ?kategori=) ─────────────────────
+// ── Portofolio ───────────────────────────────────────────────
 Route::get('/portofolio', [PortofolioController::class, 'index'])->name('portofolio');
 
 // ── Kontak ─────────────────────────────────────────────────────

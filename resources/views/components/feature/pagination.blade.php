@@ -2,7 +2,7 @@
     resources/views/components/pagination.blade.php
     Komponen Pagination — dipakai di Portofolio dan Services (dikendalikan via JS).
 --}}
-<div class="data-pagination hidden items-center justify-center gap-6 pt-10">
+<div class="data-pagination hidden items-center justify-center gap-6 mt-14 md:mt-18">
 
     {{-- Prev --}}
     <button

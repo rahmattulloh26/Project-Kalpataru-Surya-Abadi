@@ -14,6 +14,6 @@
     </div>
 
     {{-- Untuk Section CTA  --}}
-    <x-cta></x-cta>
+    <x-feature.cta></x-feature.cta>
 
 @endsection

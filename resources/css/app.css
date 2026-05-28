@@ -12,16 +12,16 @@
 /* ── Design Tokens & Theme ── */
 @theme {
     /* Font — Inter sebagai default font seluruh site */
-    --font-sans:  'Inter', ui-sans-serif, system-ui, sans-serif,
-                  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
     --font-inter: 'Inter', sans-serif;
 
     /* Brand Colors */
-    --color-hijau:       #52AE4A;
-    --color-hijau-dark:  #3d8a36;
+    --color-hijau: #52AE4A;
+    --color-hijau-dark: #3d8a36;
     --color-hijau-light: #7dc776;
-    --color-oren:        #F9B000;
-    --color-grey:        #D9D9D9;
+    --color-oren: #F9B000;
+    --color-grey: #D9D9D9;
 }
 
 /* ── Source scanning (Tailwind v4) ── */
@@ -33,4 +33,4 @@
 
 /* ── Modular CSS Files ── */
 @import './base.css';
-@import './footer.css';
+@import './components/footer.css';
