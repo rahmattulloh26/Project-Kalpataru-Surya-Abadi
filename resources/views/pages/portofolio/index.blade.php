@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Portofolio')
+@section('title', 'Portofolio Kami | KSA')
 
 @section('content')
 

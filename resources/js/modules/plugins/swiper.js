@@ -29,3 +29,31 @@ export function initHeroSwiper() {
         },
     });
 }
+
+export function initGallerySwiper() {
+    const galleryElement = document.querySelector('.gallery-swiper');
+    if (!galleryElement) return;
+
+    if (galleryElement.swiper) {
+        galleryElement.swiper.destroy(true, true);
+    }
+
+    new Swiper('.gallery-swiper', {
+        modules: [Autoplay],
+        loop: true,
+        grabCursor: true, // Mengubah kursor menjadi bentuk tangan (grab)
+        slidesPerView: 'auto',
+        spaceBetween: 16,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        observer: true,
+        observeParents: true,
+        breakpoints: {
+            768: {
+                spaceBetween: 32,
+            },
+        }
+    });
+}

@@ -32,6 +32,9 @@
 
 <body class="flex flex-col min-h-screen">
 
+    {{-- Loading Screen --}}
+    @include('components.loading')
+
     {{-- Header --}}
     @include('components.header')
 

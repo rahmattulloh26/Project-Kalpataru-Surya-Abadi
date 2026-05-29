@@ -7,17 +7,29 @@ use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
-// ── Beranda ────────────────────────────────────────────────────
+/*
+|──────────────────────────────────────────────────────────────────────────────
+| Web Routes — PT Kalpataru Surya Abadi
+|──────────────────────────────────────────────────────────────────────────────
+| Struktur View  : resources/views/pages/{page}/index.blade.php
+| Struktur Route : nama deskriptif menggunakan dot notation
+|──────────────────────────────────────────────────────────────────────────────
+*/
+
+// ── Beranda ────────────────────────────────────────────────────────────────
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// ── Tentang Kami ───────────────────────────────────────────────
+// ── Tentang Kami ───────────────────────────────────────────────────────────
 Route::get('/about-us', [AboutController::class, 'index'])->name('about-us');
 
-// ── Layanan ────────────────────────────────────────────────────
-Route::get('/service', [ServiceController::class, 'index'])->name('service');
+// ── Layanan ────────────────────────────────────────────────────────────────
+Route::prefix('service')->name('service')->group(function () {
+    Route::get('/',        [ServiceController::class, 'index'])->name('');       // /service
+    Route::get('/{slug}',  [ServiceController::class, 'show'])->name('.detail'); // /service/{slug}
+});
 
-// ── Portofolio ───────────────────────────────────────────────
+// ── Portofolio ─────────────────────────────────────────────────────────────
 Route::get('/portofolio', [PortofolioController::class, 'index'])->name('portofolio');
 
-// ── Kontak ─────────────────────────────────────────────────────
+// ── Kontak ─────────────────────────────────────────────────────────────────
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');

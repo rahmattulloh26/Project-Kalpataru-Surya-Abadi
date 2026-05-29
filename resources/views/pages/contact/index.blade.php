@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Kontak')
+@section('title', 'Kontak | KSA')
 
 @section('content')
 

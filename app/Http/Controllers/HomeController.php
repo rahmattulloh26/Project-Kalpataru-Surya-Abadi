@@ -48,6 +48,6 @@ class HomeController extends Controller
         $projects = array_slice($projects, 0, 8);
         $layanan = array_slice($layanan, 0, 6);
 
-        return view('pages.index', compact('slides', 'logos', 'layanan', 'projects'));
+        return view('pages.home.index', compact('slides', 'logos', 'layanan', 'projects'));
     }
 }

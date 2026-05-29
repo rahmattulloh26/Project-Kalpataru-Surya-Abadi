@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Layanan')
+@section('title', 'Layanan Kami | KSA')
 
 @section('content')
 
@@ -63,7 +63,7 @@
                                     {{ $bullet }}<br>
                                 @endforeach
                             </p>
-                            <a href="{{ route('contact') }}"
+                            <a href="{{ route('service.detail', $item['slug']) }}"
                                 class="text-xs font-semibold text-hijau hover:text-oren underline mt-auto pt-2 transition-colors duration-200">
                                 View Details
                             </a>

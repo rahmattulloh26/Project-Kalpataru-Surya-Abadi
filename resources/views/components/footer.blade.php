@@ -122,7 +122,7 @@
 
             {{-- ── KANAN: Map persegi ── --}}
             <div class="w-full xl:w-72 xl:h-72 aspect-square overflow-hidden shrink-0 xl:mt-4">
-                <div id="map" class="w-full h-full bg-gray-300">
+                <div id="map" class="w-full h-full bg-gray-300 relative z-0">
                     {{-- map.js mount Google Maps di sini --}}
                 </div>
             </div>

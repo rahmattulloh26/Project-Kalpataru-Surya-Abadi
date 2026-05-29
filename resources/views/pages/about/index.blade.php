@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami')
+@section('title', 'Tentang Kami | KSA')
 
 @section('content')
 

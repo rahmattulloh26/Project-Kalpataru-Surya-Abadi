@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Beranda')
+@section('title', 'PT Kalpataru Surya Abadi')
 
 @section('content')
 
@@ -12,9 +12,7 @@
     <section class="relative w-full h-screen overflow-hidden" id="hero-slider">
 
         @foreach ($slides as $i => $slide)
-            <div
-                class="hero-slide absolute inset-0 transition-opacity duration-1000 ease-in-out
-                        {{ $i === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0' }}">
+            <div class="hero-slide absolute inset-0 {{ $i === 0 ? 'opacity-100 z-10' : 'opacity-0 z-0' }}">
 
                 <img src="{{ asset($slide['img']) }}" alt="{{ strip_tags($slide['title']) }}"
                     class="absolute inset-0 w-full h-full object-cover object-center">

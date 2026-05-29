@@ -1,5 +1,6 @@
 // resources/js/modules/header.js
 // Modul Header — sticky header, hamburger menu, dropdown navigasi
+import { HeaderAnim } from '../../animations/index';
 
 /**
  * Sticky header: tambahkan shadow-sm saat scroll melewati posisi awal
@@ -19,17 +20,39 @@ export function initStickyHeader() {
 export function initHamburger() {
     const hamburger = document.querySelector('#hamburger');
     const navMenu = document.querySelector('#nav-menu');
+    const navOverlay = document.querySelector('#nav-overlay');
     const iconMenu = document.querySelector('#icon-menu');
     const iconClose = document.querySelector('#icon-close');
     if (!hamburger || !navMenu) return;
 
     let isOpen = false;
+    let scrollPosition = 0;
+    const navItems = navMenu.querySelectorAll('ul > li'); // Ambil item untuk animasi stagger
 
-    hamburger.addEventListener('click', () => {
-        isOpen = !isOpen;
+    const toggleMenu = (state) => {
+        if (isOpen === state) return;
+        isOpen = state;
 
-        // ── Toggle nav menu ───────────────────────────────────────
-        navMenu.classList.toggle('hidden', !isOpen);
+        if (isOpen) {
+            // Kunci layar dengan overflow (jauh lebih ringan dibanding position: fixed yang menyebabkan lag/reflow)
+            document.body.style.overflow = 'hidden';
+
+            // Tampilkan elemen
+            navMenu.classList.remove('hidden');
+            if (navOverlay) navOverlay.classList.remove('hidden');
+
+            // ── GSAP Masuk ──
+            HeaderAnim.animateMenuOpen(navMenu, navOverlay, navItems);
+        } else {
+            // Buka layar kembali
+            document.body.style.overflow = '';
+
+            // ── GSAP Keluar ──
+            HeaderAnim.animateMenuClose(navMenu, navOverlay, navItems, () => {
+                navMenu.classList.add('hidden');
+                if (navOverlay) navOverlay.classList.add('hidden');
+            });
+        }
 
         // ── Animasi: icon-menu (hamburger) ────────────────────────
         if (iconMenu) {
@@ -42,15 +65,33 @@ export function initHamburger() {
             iconClose.style.opacity = isOpen ? '1' : '0';
             iconClose.style.transform = isOpen ? 'scale(1) rotate(0deg)' : 'scale(0.75) rotate(90deg)';
         }
+    };
+
+    hamburger.addEventListener('click', () => {
+        toggleMenu(!isOpen);
     });
+
+    // Tutup saat overlay hitam diklik
+    if (navOverlay) {
+        navOverlay.addEventListener('click', () => toggleMenu(false));
+
+        // Mencegah kebocoran scroll saat menggeser layar di area hitam (khususnya iOS/Mobile)
+        navOverlay.addEventListener('touchmove', (e) => e.preventDefault(), { passive: false });
+        navOverlay.addEventListener('wheel', (e) => e.preventDefault(), { passive: false });
+    }
 
     // Tutup menu saat klik di luar area header
     document.addEventListener('click', (e) => {
         if (isOpen && !hamburger.closest('header').contains(e.target)) {
-            isOpen = false;
-            navMenu.classList.add('hidden');
-            if (iconMenu) { iconMenu.style.opacity = '1'; iconMenu.style.transform = 'scale(1) rotate(0deg)'; }
-            if (iconClose) { iconClose.style.opacity = '0'; iconClose.style.transform = 'scale(0.75) rotate(90deg)'; }
+            toggleMenu(false);
+        }
+    });
+
+    // Reset gaya animasi GSAP saat dibesarkan ke mode desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1280) {
+            if (isOpen) toggleMenu(false);
+            HeaderAnim.clearMenuAnimations(navMenu, navOverlay, navItems);
         }
     });
 }
@@ -71,14 +112,21 @@ export function initDropdown() {
     };
 
     dropdownBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleDropdown();
+        // Hanya tahan klik & buka accordion di Mobile (< 1280px)
+        // Di Desktop (xl), hover yang memunculkan menu, dan klik tetap pindah halaman
+        if (window.innerWidth < 1280) {
+            e.preventDefault();
+            toggleDropdown();
+        }
     });
 
     document.addEventListener('click', (e) => {
-        const isOutside = !dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target);
-        if (isOutside && !dropdownMenu.classList.contains('hidden')) {
-            toggleDropdown();
+        // Tutup saat klik di luar (khusus Mobile, karena Desktop pakai CSS hover)
+        if (window.innerWidth < 1280) {
+            const isOutside = !dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target);
+            if (isOutside && !dropdownMenu.classList.contains('hidden')) {
+                toggleDropdown();
+            }
         }
     });
 }
