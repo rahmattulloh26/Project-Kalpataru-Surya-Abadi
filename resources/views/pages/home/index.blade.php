@@ -4,7 +4,8 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'PT Kalpataru Surya Abadi')
+
+<x-slot:title> {{ $titlePage }} </x-slot:title>
 
 @section('content')
 

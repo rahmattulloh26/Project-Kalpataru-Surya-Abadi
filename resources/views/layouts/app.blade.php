@@ -8,7 +8,7 @@
     {{-- Token CSRF --}}
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- Title Header --}}
-    <title>@yield('title', 'PT. Kalpataru Surya Abadi')</title>
+    <title>{{$titlePage}}</title>
 
     {{-- Favicon --}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('src/favicon/apple-touch-icon.png') }}">
