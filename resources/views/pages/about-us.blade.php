@@ -4,7 +4,7 @@
 --}}
 @extends('layouts.app')
 
-@section('title', 'Tentang Kami')
+<x-slot:title> {{ $titlePage }} </x-slot:title>
 
 @section('content')
 
@@ -85,7 +85,7 @@
             @endforeach
         </div>
 
-        <div class="py-8 font-light text-sm md:text-base lg:text-xl">
+        <div class="py-8 font-light text-sm md:text-base lg:text-base">
             <p>
                 PT KALPATARU SURYA ABADI yang berdiri tahun 2019 adalah pengembangan dari perusahaan sebelumnya
                 bernama CV
