@@ -4,6 +4,7 @@
 --}}
 @extends('layouts.app')
 
+
 <x-slot:title> {{ $titlePage }} </x-slot:title>
 
 @section('content')

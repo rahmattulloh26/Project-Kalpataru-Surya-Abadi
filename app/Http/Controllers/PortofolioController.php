@@ -83,5 +83,6 @@ class PortofolioController extends Controller
         $projects = $this->getAllProjects();
 
         return view('pages.portofolio', ['titlePage' => 'Portofolio PT Kalpataru Surya Abadi'] , compact('projects'));
+
     }
 }

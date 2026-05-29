@@ -10,6 +10,9 @@ class AboutController extends Controller
 {
     public function index()
     {
-        return view('pages.about-us', ['titlePage' => 'About Us PT Kalpataru Surya Abadi']);
+
+        return view('pages.about-us',
+         ['titlePage' => 'About Us PT Kalpataru Surya Abadi']);
+
     }
 }
