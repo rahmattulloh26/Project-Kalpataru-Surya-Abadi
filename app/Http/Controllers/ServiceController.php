@@ -22,7 +22,7 @@ class ServiceController extends Controller
     {
         $layanan = $this->getAllLayanan();
 
-        return view('pages.services', compact('layanan'));
+        return view('pages.services', ['titlePage' => 'Service PT Kalpataru Surya Abadi'], compact('layanan'));
     }
 
     // ──────────────────────────────────────────────────────────────
