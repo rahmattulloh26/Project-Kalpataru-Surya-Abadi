@@ -14,10 +14,7 @@ class ServiceController extends Controller
     public function index()
     {
         $layanan = $this->getAllLayanan();
-
-
-        return view('pages.services', ['titlePage' => 'Service PT Kalpataru Surya Abadi'], compact('layanan'));
-
+        return view('pages.service.index', ['titlePage' => 'Service PT Kalpataru Surya Abadi'], compact('layanan'));
     }
 
     /**
@@ -39,7 +36,7 @@ class ServiceController extends Controller
             abort(404);
         }
 
-        return view('pages.service.detail', compact('service'));
+        return view('pages.service.detail', ['titlePage' => "Details Service"], compact('service'));
     }
 
     /**

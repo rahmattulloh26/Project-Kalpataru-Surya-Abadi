@@ -11,7 +11,7 @@ class AboutController extends Controller
     public function index()
     {
 
-        return view('pages.about-us',
+        return view('pages.about.index',
          ['titlePage' => 'About Us PT Kalpataru Surya Abadi']);
 
     }
