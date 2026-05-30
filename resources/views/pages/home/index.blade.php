@@ -22,23 +22,23 @@
 
                 <div class="relative z-10 h-full flex items-center">
                     <div
-                        class="px-6 sm:px-10 md:px-14 lg:px-20 xl:px-32 2xl:px-40
+                        class="px-6 sm:px-10  lg:px-20 xl:px-32 2xl:px-40
                                 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-4xl xl:max-w-5xl">
 
                         <h1
-                            class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl
+                            class="text-xl sm:text-xl md:text-3xl lg:text-3xl xl:text-5xl
                                    font-bold text-white uppercase leading-tight mb-2 md:mb-3">
                             {!! $slide['title'] !!}
                         </h1>
 
                         <p
-                            class="text-[11px] sm:text-xs md:text-sm lg:text-base
+                            class="text-[13px] italic sm:text-xs md:text-xl
                                   font-bold text-oren mb-2 md:mb-3 leading-snug">
                             {!! $slide['subtitle'] !!}
                         </p>
 
                         <p
-                            class="text-[11px] sm:text-xs md:text-sm lg:text-base
+                            class="text-[12px] sm:text-xs md:text-[16px]
                                   text-white leading-relaxed mb-5 md:mb-6 lg:mb-8">
                             {{ $slide['desc'] }}
                         </p>
